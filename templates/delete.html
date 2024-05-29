@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="well well-lg">
+            <h3 style="color: red;" id="error">{{message}}</h3>
+            <form method="POST" action="/delete" name="formName">
+                <div class="well well-sm" style="background-color: #262626;"><h2 style="font-weight: bolder; color: #ffffff; text-align: center;">Delete</h2></div>
+                <div class="form-group">
+                    <h3 style="color: black; font-weight: bolder;">Contact:</h3>
+                    <input type="text" class="form-control" name="contact" placeholder="Your phone number">
+                </div>
+                <button style="background-color: #262626; color: #ffffff;" class="btn" type="submit" name="submit" value="create">Delete Your Need</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

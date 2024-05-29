@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Covid Essentials</title>
+  <meta name="description" content="Covid Essentials - In this phase of far stretched curfew/lockdown, if anyone lacking daily essentials like food, medicine and water they can post their need in covidessentials to seek help faster.">
+  <meta name="author" content="SitePoint">
+  <meta name="keywords" content="covid19, covidessential, covidessentials, covid, help, essential, service, curfew, lockdown">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="import" href="map.html">
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-social.css') }}" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='icon.ico') }}" type="image/x-icon">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script data-ad-client="ca-pub-8915434762457170" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+<body>
+
+<!-- include the nav -->
+{% include "includes/_nav.html" %}
+
+  <div class="container">
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+  </div>
+
+  <div class="jumbotron" style="background-color:#ffffff;">
+    <h1><img src="{{ url_for('static', filename='logo.png') }}" height="60" width="60"/><strong>Covid Essentials</strong></h1>
+    <p> Powered by <strong>Zark</strong></p>
+    <div class="well well-sm text-center" style="border-color: #262626; border-radius: 2px; background-color: #262626;">
+      <h3 style="color: #ffffff;"><strong>Choose the language of your preference</strong></h3>
+      <div id="google_translate_element"></div>
+      <div>
+        <h3 style="text-align:center; color: #ffffff;"><strong>Create your need and seek help from the helpers around your region.</strong></h3>
+        <h3 class="text-center text-uppercase"><span class="label label-default" style="background-color: #ffffff;"><a style="color: #000000; text-decoration: none;" href="/create">Create Need</a></span></h3>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <iframe class="map" src="/map" width="100%" height="500" style="border-radius: 2px; "></iframe>
+  </div>
+  <div class="well well-lg" id="count" style="background-color: #ffffff;">
+    <div class="well well-sm" style="background-color: #262626;">
+      <h2 style="font-weight: bolder; text-align: center; color: #ffffff;">India - COVID-19 count</h2>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 text-center" >
+        <div class="well well-sm" style="background-color: #262626;">
+          <h3><span class="label label-warning">Total cases</span></h3>
+          <h2 style="color: #ffffff;">{{t}}</h2>
+        </div>
+      </div>
+      <div class="col-sm-3 text-center">
+        <div class="well well-sm" style="background-color: #262626;">
+          <h3><span class="label label-primary">Active cases</span></h3>
+          <h2 style="color: #ffffff;">{{a}}</h2>
+        </div>
+      </div>
+      <div class="col-sm-3 text-center">
+        <div class="well well-sm" style="background-color: #262626;">
+          <h3><span class="label label-success">Cured cases</span></h3>
+          <h2 style="color: #ffffff;">{{r}}</h2>
+        </div>
+      </div>
+      <div class="col-sm-3 text-center">
+        <div class="well well-sm" style="background-color: #262626;">
+          <h3><span class="label label-danger">Deaths</span></h3>
+          <h2 style="color: #ffffff;">{{d}}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer style="background-color: #262626; color: #ffffff;">
+    <br>
+    <h3 class="text-center"><strong>Covid Essentials</strong></h3>
+    <p class="text-center">This is a website purely in concern with the people going through the hard times during this inconsistency period, so make use of this valuably.</p>
+    <p class="text-center">- <strong>Tayalarajan T R &amp; Akash AJ</strong></p><br>
+    <h4 class="text-center"><strong>Follow us on Social Platforms</strong></h4>
+    <div class="text-center">
+      <a class="btn btn-social-icon btn-facebook text-center" href="https://www.facebook.com/covidessentialhelp" target="_blank">
+        <span class="fa fa-facebook"></span>
+      </a> &nbsp;
+      <a class="btn btn-social-icon btn-google text-center" href="https://www.instagram.com/covidessentialhelp/" target="_blank">
+        <span class="fa fa-instagram"></span>
+      </a> &nbsp;
+      <a class="btn btn-social-icon btn-twitter text-center" href="https://twitter.com/CovidEssentials" target="_blank">
+        <span class="fa fa-twitter"></span>
+      </a>
+    </div><br>
+    <p class="text-center"><strong><span class="glyphicon glyphicon-copyright-mark"></span> - 2020</strong>, reserved by covidessentials.in</p>
+    <br>
+  </footer>
+</body>
+</html>

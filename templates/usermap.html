@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="well well-lg">
+            <h3 style="color: red;" id="error">{{message}}</h3>
+            <form method="POST" action="/usermap" name="formName">
+                <div class="well well-sm" style="background-color: #262626;"><h2 style="font-weight: bolder; color: #ffffff; text-align: center;">See Your Map</h2></div>
+                <div class="form-group">
+                    <h3 style="color:black; font-weight: bolder;">Contact:</h3>
+                    <input type="text" class="form-control" name="contact" placeholder="Your phone number">
+                </div>
+                <button style="background-color: #262626; color: #ffffff;" class="btn" type="submit" name="submit" value="create">View Map</button>
+            </form><br>
+        </div>
+
+        <div class="well well-lg" style="background-color: #262626;">
+            <div class="well well-sm"><h2 style="font-weight: bolder; text-align: center;">Your needs map</h2></div>
+            <iframe class="map" srcdoc="{{map}}" width="100%" height="500" style="border-radius: 2px; "></iframe>
+        </div>
+    </div>
+
+{% endblock %}

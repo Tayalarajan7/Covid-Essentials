@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div class="well well-lg" style="background-color: #262626;">
+    <form method="POST" action="{{url}}">
+
+    {% if message %}
+        <!--<p class="error">{{message}}</p>-->
+        <div class="alert alert-danger">
+            <strong>Error</strong> {{message}}
+        </div>
+    {% endif %}
+        <div class="well well-sm"><h2 style="font-weight: bolder; text-align: center;">OTP Verification</h2></div>
+        <div class="form-group">
+            <label for="email" style="color: #ffffff;">Enter the OTP:</label>
+            <input type="text" class="form-control" name="otp" placeholder="OTP">
+        </div>
+        <button type="submit" class="btn" value="Verify">Verify & post</button>
+    </form>
+</div>
+
+{% endblock %}

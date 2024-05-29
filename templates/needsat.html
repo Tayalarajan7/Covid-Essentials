@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block content %}
+        <style>
+            .table-hover tbody tr:hover td {
+            background: grey;
+            }
+        </style>
+
+        <div class="well well-lg" style="background-color: #262626;">
+            <div class="well well-sm"><h2 style="font-weight: bolder; text-align: center;">Needs satified by Tiruppur Goverment</h2></div>
+            <iframe class="map" srcdoc="{{mapt}}" width="100%" height="500" style="border-radius: 2px; "></iframe>
+            <div style="color: #ffffff;">
+                <h3><strong>Needs satisfied visual count</strong></h3>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>State natives</th>
+                        <th>Number of people satisfied</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Karnataka</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Uttar Pradesh</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>Maharashtra</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Punjab</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>West Bengal</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>Kerala</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>Rajasthan</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>Andhra Pradesh</td>
+                        <td>18</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 style="color:#ffffff;" >Number of needs satisfies till now: <strong>100</strong></h3>
+        </div>
+
+{% endblock %}
